@@ -11,15 +11,16 @@ public class CircleApp {
 			
 		System.out.println("Welcome to the circle tester");
 		
+		
+		
 		String prompt = "Enter radius: ";
-		System.out.println(prompt);
-		double ra=sc.nextDouble();
+		System.out.println();
+		double ra=Validator.getDouble(sc,prompt);
 		Circle cir1 = new Circle(ra);
 		
 		System.out.println("Circumference: " + cir1.getFormattedCircumference());
 		System.out.println("Area: " + cir1.getFormattedArea());
-		System.out.println("Continue? (y/n)");
-		cont = sc.next();
+		cont = Validator.getString(sc, "Continue? (y/n)");
 		
 		
 		}
