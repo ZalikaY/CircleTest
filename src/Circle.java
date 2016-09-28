@@ -7,7 +7,6 @@ public class Circle {
 	public double Area;
 	public String FormattedArea;
 	public double radius;
-	private double PI = 3.14;
 	public double diameter;
 	
 	//Constructor 
@@ -24,7 +23,7 @@ public class Circle {
 	}
 	
 	public double getArea(){
-		return PI * radius *radius;
+		return Math.PI * radius *radius;
 	}
 
 	public double getDiameter(){
@@ -32,7 +31,7 @@ public class Circle {
 	}
 	
 	public double getCircumference(){
-		return 2 * PI * radius;
+		return 2 * Math.PI * radius;
 	}
 	
 	
