@@ -2,6 +2,7 @@ import java.lang.Math;
 public class Circle {
 
 	//Instantiate Instant variable
+	public static int objectCount=0;
 	public double Circumference;
 	public String FormattedCircumference;
 	public double Area;
@@ -12,6 +13,7 @@ public class Circle {
 	//Constructor 
 	public Circle(double ra) {
 		radius = ra;
+		objectCount++;
 	}
 	//Set methods
 	public void setRadius(double ra){
@@ -34,9 +36,27 @@ public class Circle {
 		return 2 * Math.PI * radius;
 	}
 	
+	public String getFormattedCircumference() {
+		double cirF = getCircumference() ;
+		return String.format("%.2f", cirF);	
+	}
+
+	public String getFormattedArea() {
+		double areF = getArea() ;
+		return String.format("%.2f" , areF);
+	}
+	
+		
 	
 
 
-
+//Static because it's shared with all instances
+public static int getObjectCount(){
+	return objectCount;
+}
+	
 
 }
+
+
+
