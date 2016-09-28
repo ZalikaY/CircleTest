@@ -11,8 +11,8 @@ public class CircleApp {
 			
 		System.out.println("Welcome to the circle tester");
 		
-		
-		System.out.println("Enter radius: ");
+		String prompt = "Enter radius: ";
+		System.out.println(prompt);
 		double ra=sc.nextDouble();
 		Circle cir1 = new Circle(ra);
 		
@@ -23,7 +23,7 @@ public class CircleApp {
 		
 		
 		}
-		System.out.println("Goodbye.You created " + Circle.objectCount + "Circle objects(s)." );
+		System.out.println("Goodbye.You created " + Circle.objectCount + " Circle object(s)." );
 		
 		
 	}
